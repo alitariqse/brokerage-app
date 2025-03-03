@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
       { path: 'overview', loadChildren: () => import('./core-features/overview/overview.module').then(m => m.OverviewModule), canActivate: [authGuard] },
-      { path: 'dashboard', loadChildren: () => import('./core-features/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [authGuard] },
+      { path: 'dashboard/:accountID', loadChildren: () => import('./core-features/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [authGuard] },
       { path: 'profile', loadChildren: () => import('./core-features/profile/profile.module').then(m => m.ProfileModule), canActivate: [authGuard] },
       { path: 'orders', loadChildren: () => import('./core-features/orders/orders.module').then(m => m.OrdersModule), canActivate: [authGuard] },
       { path: 'achievements', loadChildren: () => import('./core-features/achievements/achievements.module').then(m => m.AchievementsModule), canActivate: [authGuard] },

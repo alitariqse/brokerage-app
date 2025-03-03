@@ -8,7 +8,9 @@ import { OpenTradesComponent } from './open-trades/open-trades.component';
 import { ClosedTradesComponent } from './closed-trades/closed-trades.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { AccountBalanceChartComponent } from './account-balance-chart/account-balance-chart.component';
+import { AccountOverviewComponent } from './account-overview/account-overview.component';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AccountBalanceChartComponent } from './account-balance-chart/account-ba
     DashboardComponent,
     OpenTradesComponent,
     ClosedTradesComponent,
-    AccountBalanceChartComponent
+    AccountOverviewComponent,
+    DashboardHeaderComponent,
+    AccountDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +33,9 @@ import { AccountBalanceChartComponent } from './account-balance-chart/account-ba
   exports: [
     OpenTradesComponent,
     ClosedTradesComponent,
-    AccountBalanceChartComponent
+    AccountOverviewComponent,
+    DashboardHeaderComponent,
+    AccountDetailsComponent
   ]
 })
 export class DashboardModule { }

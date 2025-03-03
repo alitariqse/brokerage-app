@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-md-4 py-2 py-md-0">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title text-white">Profit Target</h5>
+                <p class="card-text text-white"><span class="fs-22 fw-bold">${{ profitTarget }}</span>/$1,350</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 py-2 py-md-0">
+        <div class="card text-white bg-danger">
+            <div class="card-body">
+                <h5 class="card-title text-white">Max Loss</h5>
+                <p class="card-text text-white"><span class="fs-22 fw-bold">${{ maxLoss }}</span>/-$900</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 py-2 py-md-0">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title text-white">Daily Pause</h5>
+                <p class="card-text text-white"><span class="fs-22 fw-bold">${{ dailyPause }}</span> left</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h5 class="card-title fs-18">Account Balance</h5>
+
+        <div class="d-flex justify-content-start gap-4 py-2">
+            <div>
+                <h5 class="card-title fs-12 text-muted">Daily P&L</h5>
+                <p class="card-text fs-22">$0.00</p>
+            </div>
+            <div>
+                <h5 class="card-title fs-12 text-muted">Unrealized P&L</h5>
+                <p class="card-text fs-22">$0.00</p>
+            </div>
+            <div>
+                <h5 class="card-title fs-12 text-muted">Balance</h5>
+                <p class="card-text fs-22">$0.00</p>
+            </div>
+        </div>
+
+        <canvas baseChart [height]="'80'" [data]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [legend]="lineChartLegend" [type]="lineChartType">
+        </canvas>
+    </div>
+</div>
+
+<div class="row d-flex flex-column flex-md-row mt-4">
+    <div class="col py-2 py-md-0">
+        <div class="card text-black">
+            <div class="card-body py-2 d-flex align-items-center gap-1">
+                <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/best-stock.png" alt="icon"
+                    class="me-2" width="45" height="45">
+                <div>
+                    <h5 class="card-title fs-14 fw-bold text-nowrap">Best Stock</h5>
+                    <p class="card-text fs-18 fw-bold text-nowrap">AAPL</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col py-2 py-md-0">
+        <div class="card text-black">
+            <div class="card-body py-2 d-flex align-items-center gap-1">
+                <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/best-day.png" alt="icon" class="me-2"
+                    width="45" height="45">
+                <div>
+                    <h5 class="card-title  fs-14 fw-bold text-nowrap">Best Day</h5>
+                    <p class="card-text fs-18 fw-bold text-nowrap">2025-02-13</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col py-2 py-md-0">
+        <div class="card text-black">
+            <div class="card-body py-2 d-flex align-items-center gap-1">
+                <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/risk-ratio.png" alt="icon"
+                    class="me-2" width="45" height="45">
+                <div>
+                    <h5 class="card-title  fs-14 fw-bold text-nowrap">Risk/Reward Ratio</h5>
+                    <p class="card-text fs-18 fw-bold text-nowrap">1:2.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col py-2 py-md-0">
+        <div class="card text-black">
+            <div class="card-body py-2 d-flex align-items-center gap-1">
+                <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/success-rate.png" alt="icon"
+                    class="me-2" width="45" height="45">
+                <div>
+                    <h5 class="card-title  fs-14 fw-bold text-nowrap">Success Rate</h5>
+                    <p class="card-text fs-18 fw-bold text-nowrap">52.00%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

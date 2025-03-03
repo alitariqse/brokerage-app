@@ -1,7 +1,7 @@
 <div class="row header align-items-center px-3 px-sm-5">
   <!-- Logo Section -->
   <div class="col-12 col-md-2 text-center text-md-start mb-3 mb-md-0">
-    <img class="img-fluid" [src]="'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp'"
+    <img class="img-fluid" [src]="'assets/logo/logo.webp'"
       alt="Logo" width="100">
   </div>
 
@@ -9,7 +9,7 @@
   <div class="col-12 col-md-10 my-3 my-md-0">
     <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
       <!-- Path/Breadcrumb -->
-      <span class="fs-14 mb-2 mb-md-0">Trader / Account Overview / ORDER#1233221</span>
+      <span class="fs-14 mb-2 mb-md-0">Trader / {{generateBreadCrumbs()}}</span>
 
       <!-- Controls -->
       <div class="d-flex align-items-center gap-3 gap-sm-5">

@@ -1,13 +1,14 @@
 import { Options } from '@angular-slider/ngx-slider';
 import { Component } from '@angular/core';
 import { ChartConfiguration, ChartOptions, ChartType } from 'chart.js';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
-  selector: 'app-account-balance-chart',
-  templateUrl: './account-balance-chart.component.html',
-  styleUrls: ['./account-balance-chart.component.scss']
+  selector: 'app-account-overview',
+  templateUrl: './account-overview.component.html',
+  styleUrls: ['./account-overview.component.scss']
 })
-export class AccountBalanceChartComponent {
+export class AccountOverviewComponent {
 
   value: number = 100;
   options: Options = {
@@ -67,6 +68,14 @@ export class AccountBalanceChartComponent {
   // Show legend
   lineChartLegend = false;
 
+  mode = localStorage.getItem('theme')
+  profitTarget = 131.69;
+  maxLoss = 0.00;
+  dailyPause = 300;
 
+  constructor(public commonService: CommonService) {
+
+
+  }
 
 }

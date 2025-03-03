@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccountBalanceChartComponent } from './account-balance-chart.component';
+import { AccountBalanceChartComponent } from './account-overview.component';
 
 describe('AccountBalanceChartComponent', () => {
   let component: AccountBalanceChartComponent;

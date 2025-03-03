@@ -1,0 +1,128 @@
+<div class="card text-black">
+    <div class="card-body py-2">
+      <div class="d-flex flex-column gap-3">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex w-100">
+            <span class="text-muted"><i class="fa fa-desktop me-2"></i></span>
+            <div class="flex-item paragraph fs-12">Account Type</div>
+          </div>
+          <div class="flex-item fw-bold text-nowrap fs-14">
+            Evaluation
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex w-100">
+            <span class="text-muted"><i class="fa fa-rocket me-2"></i></span>
+            <div class="flex-item paragraph fs-12">Account Platform</div>
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            Trader Evolution
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex w-100">
+            <span class="text-muted"><i class="fa fa-university me-2"></i></span>
+            <div class="flex-item paragraph fs-12">Account Size</div>
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            $20,000.00
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex w-100">
+            <span class="text-muted"><i class="fa fa-recycle me-2"></i></span>
+            <div class="flex-item paragraph fs-12">Status</div>
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            Active
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex w-100">
+            <span class="text-muted"><i class="fa fa-clock me-2"></i></span>
+            <div class="flex-item paragraph fs-12">Program Ends</div>
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            April 4, 2025
+          </div>
+        </div>
+      </div>
+      <div class="d-flex py-3">
+        <button type="button" class="btn w-100 fs-14" [ngClass]="commonService.isDarkMode ? 'btn-dark' : 'btn-light'"
+          disabled>
+          <span class="primary-color"><i class="fa fa-university me-2"></i></span> Forbidden Practices</button>
+      </div>
+
+      <div class="d-flex flex-column gap-3">
+        <div class="card text-black">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center gap-1">
+              <h5 class="card-title fs-14 purple-color fw-bold">Best Trade Profit Limit</h5>
+              <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/best-trade-profit.png" alt="icon">
+            </div>
+            <div class="round-bg mb-1">50% Cap Limit</div>
+            <p class="card-text m-0"><span class="fs-18 fw-bold">{{ '31%' }}</span></p>
+            <p class="card-text"><span class="fs-12">Your best trade can not exceed 50% of total profit.</span></p>
+
+          </div>
+        </div>
+
+        <div class="card text-black">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center gap-1">
+              <h5 class="card-title fs-14 purple-color fw-bold">Minimum Trades</h5>
+              <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/minimum-trades.png" alt="icon">
+            </div>
+            <p class="card-text m-0"><span class="fs-18 fw-bold">{{ '10' }}</span>/10</p>
+            <p class="card-text"><span class="fs-12">Should have minimum 10 trades.</span></p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column gap-2 py-3">
+
+        <div class="d-flex">
+          <h4 class="fs-18">Advanced Statistics</h4>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div class="flex-item paragraph fs-12">
+            <span style="color: #f6559f">|</span>
+            Remaining Risk
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            $300.00
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="flex-item paragraph fs-12">
+            <span style="color: #f6559f">|</span>
+            Realize P&L
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            $0.00
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="flex-item paragraph fs-12">
+            <span style="color: #f6559f">|</span>
+            Market Value
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            $0.00
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="flex-item paragraph fs-12">
+            <span style="color: #f6559f">|</span>
+            Total Volume
+          </div>
+          <div class="flex-item fw-bold-500 text-nowrap fs-14">
+            $0.00
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
