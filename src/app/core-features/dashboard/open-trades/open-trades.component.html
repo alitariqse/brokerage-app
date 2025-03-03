@@ -1,0 +1,71 @@
+<div class="mt-4">
+    <div class="card text-black">
+      <div class="card-body">
+        <h5 class="card-title px-2 fs-18 py-3">Open Trades</h5>
+ 
+        <mat-table [dataSource]="dataSource" class="mat-table scroll-bar-table custom-border">
+          <ng-container matColumnDef="Account_ID">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold min-width-custom " *matHeaderCellDef>
+              ID
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap min-width-custom " *matCellDef="let element">
+              {{ element?.Account_ID }}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Entry_Date">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold min-width-custom " *matHeaderCellDef>
+              Date
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap min-width-custom " *matCellDef="let element">
+              {{ element?.Entry_Date | date: 'MMM d h:mm a' }}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Symbol">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold" *matHeaderCellDef>
+              Symbol
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap" *matCellDef="let element">
+              <span class="symbol">{{ element?.Symbol}}</span>
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Position_Size">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold" *matHeaderCellDef>
+              Side
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap" *matCellDef="let element">
+              <span class="Buy"> Buy</span>
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Entry_Price">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold" *matHeaderCellDef>
+              Entry
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap" *matCellDef="let element">
+              {{ element?.Entry_Price}}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Qty">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold" *matHeaderCellDef>
+              Qty
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap" *matCellDef="let element">
+              {{ element?.Qty}}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Fee">
+            <mat-header-cell class="mat-header-font fs-14 fw-bold" *matHeaderCellDef>
+              Fee
+            </mat-header-cell>
+            <mat-cell class="mat-cell-min-width mat-cell-font fs-12 text-nowrap" *matCellDef="let element">
+              $1.50
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="actualColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: actualColumns"></mat-row>
+        </mat-table>
+        <mat-paginator  [pageSize]="10" aria-label="Select page">
+        </mat-paginator>
+      </div>
+    </div>
+
+  </div>

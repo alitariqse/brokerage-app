@@ -1,0 +1,19 @@
+  
+  .mat-header-font, .mat-cell-font {
+    min-width: 2vh !important;
+  }
+
+  .min-width-custom {
+    min-width: 15vh !important
+  }
+  
+  @media screen and (max-width: 1536px) {
+    .mat-header-font, .mat-cell-font{
+        min-width: 10vh !important;
+    }
+    .min-width-custom {
+      min-width: 20vh !important
+    }
+    
+  }
+  

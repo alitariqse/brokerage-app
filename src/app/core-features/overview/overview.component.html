@@ -1,0 +1,65 @@
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-color">My Programs</h2>
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-pills mb-3">
+        <li *ngFor="let type of typesList;" class="nav-item">
+            <a class="nav-link fs-14 bg-white me-2 d-flex align-items-center nav-link-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" [attr.fill]="type?.color"
+                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8" />
+                </svg>
+                <span class="ms-2">{{type?.name}}</span>
+            </a>
+        </li>
+    </ul>
+    <!-- Program Card -->
+    <div *ngFor="let program of allPrograms" class="program-card" [style.border-left]="'10px solid ' + getColor(program.Type)">
+        <div class="row align-items-center mb-2">
+            <!-- <div class="col-auto">
+                <div class="icon-circle bg-light rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">
+                    <span class="text-primary">🚀</span>
+                </div>
+            </div> -->
+            <div class="col">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">{{program?.name}}</h5>
+                        <small class="text-muted">#{{program?.id}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-content-row">
+                <div class="card-content-item">
+                    <small class="text-muted">Size</small>
+                    <p class="mb-0">{{program?.size}}</p>
+                </div>
+            </div>
+            <div class="col card-content-row">
+
+                <div class="card-content-item">
+                    <small class="text-muted">Balance</small>
+                    <p class="mb-0">{{program?.balance}}</p>
+                </div>
+            </div>
+            <div class="col card-content-row">
+
+                <div class="card-content-item">
+                    <small class="text-muted">Status</small>
+                    <div class="status-badge" [ngClass]="getStatusClass(program.status)">
+                        {{ program.status }}
+                      </div>                </div>
+            </div>
+            <div class="col card-content-row">
+                <div class="card-content-item">
+                    <small class="text-muted">Expiration date</small>
+                    <p class="mb-0">{{program?.expirationDate}}</p>
+                </div>
+            </div>
+            <div class="col">
+                <button class="dashboard-btn" type="button" routerLink="/dashboard">Dashboard</button>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,63 @@
+<mat-drawer-container class="h-100 w-100 mb-3 body-bg" layout="row" [hasBackdrop]="isMobile">
+  <mat-drawer #drawer class="sidebar" [mode]="mode" [opened]="isOpen">
+    <div class="d-flex flex-column">
+      <div class="ham example-sidenav-content d-block d-lg-none">
+        <img src="assets/drawer-list.svg" (click)="drawer.toggle()" alt="" />
+      </div>
+      <ul class="nav flex-column flex-xl-column px-0">
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link d-flex gap-3 align-items-center sideBar"
+            [ngClass]="isActive('/overview') || isActive('/dashboard')  ? 'active-nav' : ''" aria-current="page" href="#" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show" routerLink="overview">
+            <label class="form-label fs-14"><i class="fa fa-home me-2 fs-14 text-muted"></i> Overview</label>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link d-flex gap-3 align-items-center sideBar"
+            [ngClass]="isActive('/orders') ? 'active-nav' : ''" aria-current="page" href="#" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show" routerLink="orders">
+            <label class="form-label fs-14"><i class="fa fa-money-bill-wave me-2 fs-14 text-muted"></i> Orders</label>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link d-flex gap-3 align-items-center sideBar"
+            [ngClass]="isActive('/affiliation') ? 'active-nav' : ''" aria-current="page" href="#" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show" routerLink="affiliation">
+            <label class="form-label fs-14"><i class="fa fa-compass me-2 fs-14 text-muted"></i> Affiliation</label>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link d-flex gap-3 align-items-center sideBar"
+            [ngClass]="isActive('/profile') ? 'active-nav' : ''" aria-current="page" href="#" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show" routerLink="profile">
+            <label class="form-label fs-14"><i class="fa fa-user me-2 fs-14 text-muted"></i> Profile</label>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link d-flex gap-3 align-items-center sideBar"
+            [ngClass]="isActive('/achievements') ? 'active-nav' : ''" aria-current="page" href="#" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show" routerLink="achievements">
+            <label class="form-label fs-14"><i class="fa fa-award me-2 fs-14 text-muted"></i> Achievements</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="maincontainer">
+    <div class="mx-3">
+      <div class="ham example-sidenav-content d-block d-lg-none mt-3 d-flex align-items-center justify-content-between">
+        <svg (click)="drawer.toggle()" width="32px" height="32px" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <div class="margins-response" #scrollContainer>
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

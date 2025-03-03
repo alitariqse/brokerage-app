@@ -1,0 +1,50 @@
+.program-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    width: fit-content;
+}
+.nav-pills .nav-link {
+    color: var(--nav-link-text-color);
+    border-radius: 0;
+    padding: 8px 16px;
+}
+
+.dashboard-btn {
+    background-color: #9c27b0;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.dashboard-btn:hover {
+    background-color: #7b1fa2;
+}
+/* Ensure card content stays in one line on larger screens */
+.card-content-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+}
+.card-content-item {
+    flex: 1;
+    min-width: 0; /* Allow content to shrink */
+}
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .card-content-row {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    .card-content-item {
+        flex: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+<div class="row header align-items-center px-3 px-sm-5">
+  <!-- Logo Section -->
+  <div class="col-12 col-md-2 text-center text-md-start mb-3 mb-md-0">
+    <img class="img-fluid" [src]="'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp'"
+      alt="Logo" width="100">
+  </div>
+
+  <!-- Navigation and Controls Section -->
+  <div class="col-12 col-md-10 my-3 my-md-0">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <!-- Path/Breadcrumb -->
+      <span class="fs-14 mb-2 mb-md-0">Trader / Account Overview / ORDER#1233221</span>
+
+      <!-- Controls -->
+      <div class="d-flex align-items-center gap-3 gap-sm-5">
+        <!-- Dark Mode Toggle -->
+        <div class="cursor-pointer">
+          <input type="checkbox" [checked]="commonService?.isDarkMode" class="checkbox" id="chk"
+            (input)="toggleTheme()" />
+          <label class="label" for="chk">
+            <i class="fa fa-solid fa-moon"></i>
+            <i class="fa fa-solid fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+
+        <!-- New Order Button -->
+        <button class="btn btn-md pink-button text-nowrap cursor-pointer" (click)="openDialog()"><i class="fa fa-bolt mr-2"></i> New Order</button>
+
+
+        <!-- Balance -->
+        <span class="fs-14 fw-bold primary-color text-nowrap cursor-pointer"><i
+            class="fa fa-paragraph fa-flip-horizontal fs-14 me-1"></i>0.00</span>
+
+
+        <!-- Notification and User Icons -->
+        <span class="cursor-pointer"><i class="fa fa-bell"></i></span>
+        <span class="cursor-pointer" routerLink="profile"><i class="fa fa-user"></i></span>
+      </div>
+    </div>
+  </div>
+</div>

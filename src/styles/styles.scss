@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../assets/Mona-Sans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #f6559f;
+  --profit-target-bg-color: #399ca5;
+  --max-loss-bg-color: #3f69e2;
+  --daily-pause-bg-color: #f6559f;
+  --body-background-color: #f7f7f7;
+  --modal-body-background-color: white;
+  --cards-background-color: #ffffff;
+  --layout-bg-color: white;
+  --text-color: black;
+  --mat-header-row-bg: #f6f6f6;
+  --mat-header-row-text-color: #a0a0a0;
+  --mat-row-text-color: black;
+  --text-muted-color: rgba(33, 37, 41, 0.75);
+  --nav-link-bg: white;
+  --nav-link-text-color: #6c757d;
+  --best-trade-profit-limit-minimum-trades-text-color: #6b04fc;
+  --50-per-market-cap-bg-color: #ebf0fc;
+  --50-per-market-cap-text-color: #3f5db1;
+  --mat-mdc-form-field-flex-padding-left: 0;
+  --win-buy-bg-color: #ebf5f6;
+  --win-buy-text-color: #399ca5;
+
+  --loss-sell-bg-color: #fce8ef;
+  --loss-sell-text-color: #e22266;
+
+  --symbol-bg-color: #ebf0fc;
+  --symbol-text-color: #7f9bec;
+
+}
+
+.dark-mode {
+  --primary-color: #399ca5;
+  --profit-target-bg-color: #2cd6e1;
+  --max-loss-bg-color: #719ff0;
+  --daily-pause-bg-color: #2cd6e1;
+  --body-background-color: black;
+  --modal-body-background-color: black;
+  --cards-background-color: #292e32;
+  --layout-bg-color: #292e32;
+  --text-color: white;
+  --mat-header-row-bg: black;
+  --mat-header-row-text-color: #a0a0a0;
+  --mat-row-text-color: #a0a0a0;
+  --text-muted-color: #a0a0a0;
+  --nav-link-bg: #292e32;
+  --nav-link-text-color: #6c757d;
+  --best-trade-profit-limit-minimum-trades-text-color: #f6559f;
+  --50-per-market-cap-bg-color: #313945;
+  --50-per-market-cap-text-color: #5d91c7;
+  --mat-mdc-form-field-flex-padding-left: 0.5rem;
+  --win-buy-bg-color: #293f44;
+  --win-buy-text-color: #2bb9c7;
+
+  --loss-sell-bg-color: #3f323d;
+  --loss-sell-text-color: #e2569d;
+
+  --symbol-bg-color: #313945;
+  --symbol-text-color: #5d98e8;
+
+
+}
+
+.Win,
+.Buy {
+  background: var(--win-buy-bg-color); //#293f44
+  padding: 2px 12px;
+  border-radius: 3px;
+  color: var(--win-buy-text-color); //#2bb9c7
+}
+
+.Loss,
+.Sell {
+  background: var(--loss-sell-bg-color); //#3f323d
+  padding: 2px 12px;
+  border-radius: 3px;
+  color: var(--loss-sell-text-color); //#e2569d
+}
+
+.symbol {
+  background: var(--symbol-bg-color); //#313945
+  padding: 2px 12px;
+  border-radius: 3px;
+  color: var(--symbol-text-color); //#5d98e8
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--layout-bg-color) !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: var(--layout-bg-color) !important;
+  --mdc-outlined-text-field-focus-outline-color: var(--primary-color) !important;
+  --mdc-outlined-text-field-label-text-color: var(--primary-color) !important;
+}
+
+.mdc-floating-label {
+  color: var(--text-muted-color) !important;
+}
+
+.mat-mdc-form-field-flex,
+.mat-mdc-form-field-infix {
+  padding-left: var(--mat-mdc-form-field-flex-padding-left) !important;
+}
+
+.mat-mdc-dialog-surface {
+  background: transparent !important;
+}
+
+.text-color {
+  color: var(--text-color) !important;
+}
+
+.primary-color {
+  color: var(--primary-color) !important;
+}
+
+.card,
+.program-card, mat-table {
+  background-color: var(--cards-background-color) !important;
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+.nav-link-bg {
+  background-color: var(--nav-link-bg) !important;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--text-color) !important;
+}
+
+.card-body {
+  color: var(--text-color) !important;
+}
+
+mat-header-row {
+  background-color: var(--mat-header-row-bg) !important;
+  color: var(--mat-header-row-text-color) !important;
+}
+
+mat-row,
+mat-paginator,
+.mat-mdc-paginator-icon {
+  background-color: var(--cards-background-color) !important;
+  color: var(--mat-row-text-color) !important;
+}
+
+.scrollable-pills {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.scrollable-pills::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  font-family: 'Mona Sans', sans-serif;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.mat-mdc-paginator-page-size {
+  display: none !important;
+}
+
+
+.scroll-bar-table {
+  min-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--primary-color) !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--mat-header-row-bg) !important;
+  }
+}
+
+mat-drawer-content {
+  margin-left: 320px !important;
+}
+
+@media screen and (max-width: 1020px) {
+  mat-drawer-content {
+    margin-left: 1px !important;
+  }
+}
+
+.pink-button {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
