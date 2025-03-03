@@ -1,7 +1,0 @@
-{"/v1/*": {
-    "target": "https://aixrym4neg.execute-api.us-east-1.amazonaws.com/awsuit-temp/inv/register",
-    "secure": false,
-    "changeOrgin":true,
-    "pathRewrite":{"^/*":"https://aixrym4neg.execute-api.us-east-1.amazonaws.com/awsuit-temp/inv/register/"}
-  }
-}
