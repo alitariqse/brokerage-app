@@ -6,15 +6,17 @@ import { DashboardComponent } from './dashboard.component';
 import { NgChartsModule } from 'ng2-charts';
 import { OpenTradesComponent } from './open-trades/open-trades.component';
 import { ClosedTradesComponent } from './closed-trades/closed-trades.component';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { AccountBalanceChartComponent } from './account-balance-chart/account-balance-chart.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     OpenTradesComponent,
-    ClosedTradesComponent
+    ClosedTradesComponent,
+    AccountBalanceChartComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   ],
   exports: [
     OpenTradesComponent,
-    ClosedTradesComponent
+    ClosedTradesComponent,
+    AccountBalanceChartComponent
   ]
 })
 export class DashboardModule { }

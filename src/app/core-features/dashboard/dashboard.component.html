@@ -1,5 +1,4 @@
 <div class="row">
-
   <div class="col-md-12 d-flex justify-content-between align-items-center pt-4 pb-5 flex-column flex-sm-row">
     <h4 class="fs-20 fw-bold text-color">#999999 - Mini BP - Limited Edition - 20K</h4>
     <div>
@@ -35,35 +34,12 @@
           <div class="card-body">
             <h5 class="card-title text-white">Daily Pause</h5>
             <p class="card-text text-white"><span class="fs-22 fw-bold">${{ dailyPause }}</span> left</p>
-
           </div>
         </div>
       </div>
     </div>
-    <div class="card mt-4">
-      <div class="card-body">
-        <h5 class="card-title fs-18">Account Balance</h5>
 
-        <div class="d-flex justify-content-start gap-4 py-2">
-          <div>
-            <h5 class="card-title fs-12 text-muted">Daily P&L</h5>
-            <p class="card-text fs-22">$0.00</p>
-          </div>
-          <div>
-            <h5 class="card-title fs-12 text-muted">Unrealized P&L</h5>
-            <p class="card-text fs-22">$0.00</p>
-          </div>
-          <div>
-            <h5 class="card-title fs-12 text-muted">Balance</h5>
-            <p class="card-text fs-22">$0.00</p>
-          </div>
-        </div>
-
-        <canvas baseChart [height]="'80'" [data]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-          [legend]="lineChartLegend" [type]="lineChartType">
-        </canvas>
-      </div>
-    </div>
+    <app-account-balance-chart></app-account-balance-chart>
 
     <div class="row d-flex flex-column flex-md-row mt-4">
       <div class="col py-2 py-md-0">
@@ -128,7 +104,6 @@
         <div class="d-flex flex-column gap-3">
           <div class="d-flex justify-content-between">
             <div class="d-flex w-100">
-              <!-- <img src="assets/icons/account-type.png" alt="icon" class="me-2" width="20" height="20"> -->
               <span class="text-muted"><i class="fa fa-desktop me-2"></i></span>
               <div class="flex-item paragraph fs-12">Account Type</div>
             </div>
@@ -138,7 +113,6 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="d-flex w-100">
-              <!-- <img src="assets/icons/account-platform.png" alt="icon" class="me-2" width="20" height="20"> -->
               <span class="text-muted"><i class="fa fa-rocket me-2"></i></span>
               <div class="flex-item paragraph fs-12">Account Platform</div>
             </div>
@@ -148,7 +122,6 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="d-flex w-100">
-              <!-- <img src="assets/icons/account-size.png" alt="icon" class="me-2" width="20" height="20"> -->
               <span class="text-muted"><i class="fa fa-university me-2"></i></span>
               <div class="flex-item paragraph fs-12">Account Size</div>
             </div>
@@ -158,7 +131,6 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="d-flex w-100">
-              <!-- <img src="assets/icons/status.png" alt="icon" class="me-2" width="20" height="20"> -->
               <span class="text-muted"><i class="fa fa-recycle me-2"></i></span>
               <div class="flex-item paragraph fs-12">Status</div>
             </div>
@@ -168,7 +140,6 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="d-flex w-100">
-              <!-- <img src="assets/icons/program-funds.png" alt="icon" class="me-2" width="20" height="20"> -->
               <span class="text-muted"><i class="fa fa-clock me-2"></i></span>
               <div class="flex-item paragraph fs-12">Program Ends</div>
             </div>
