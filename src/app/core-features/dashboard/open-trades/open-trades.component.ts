@@ -10,8 +10,10 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class OpenTradesComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
-  constructor(private commonService: CommonService) {}
+  formattedData: any = [];
+  pageSize = 10;
+  pageSizeOptions = [10, 20, 50, 100];
+  constructor(private commonService: CommonService) { }
 
   dataSource = new MatTableDataSource<any>()
   actualColumns: string[] = [
@@ -31,9 +33,9 @@ export class OpenTradesComponent implements OnInit {
   getOpenTrades() {
     this.commonService.getAllopenTrades().subscribe({
       next: (data) => {
-        const formattedData = data
-        this.dataSource = new MatTableDataSource(formattedData); // Wrap in MatTableDataSource
-        this.dataSource.paginator = this.paginator; // Set paginator after assigning data
+        this.formattedData = data
+        this.dataSource.data = this.formattedData; // Assign data instead of creating a new instance
+        this.dataSource.paginator = this.paginator; // Reassign paginator after data update
       },
 
       error: (data) => {

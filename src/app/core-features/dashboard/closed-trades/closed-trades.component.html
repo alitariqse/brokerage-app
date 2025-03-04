@@ -38,7 +38,7 @@
             Symbol
           </mat-header-cell>
           <mat-cell class="mat-cell-min-width mat-cell-font text-nowrap fs-12" *matCellDef="let element">
-           <span class="symbol">{{ element?.Symbol}}</span> 
+            <span class="symbol">{{ element?.Symbol}}</span>
           </mat-cell>
         </ng-container>
         <ng-container matColumnDef="Position_Size">
@@ -94,17 +94,17 @@
             Status
           </mat-header-cell>
           <mat-cell class="mat-cell-min-width mat-cell-font text-nowrap fs-12" *matCellDef="let element">
-            <span class="d-flex align-items-center gap-1 {{element?.status}}"><i [ngClass]="element?.status == 'Win' ? 'fa fa-sort-up mt-1' : 'fa fa-sort-down mb-1'"></i>
+            <span class="d-flex align-items-center gap-1 {{element?.status}}"><i
+                [ngClass]="element?.status == 'Win' ? 'fa fa-sort-up mt-1' : 'fa fa-sort-down mb-1'"></i>
               {{element?.status}}</span>
           </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="actualColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: actualColumns"></mat-row>
       </mat-table>
-
-      <mat-paginator [pageSize]="10" aria-label="Select page">
+      <mat-paginator [length]="formattedData?.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+        aria-label="Select page">
       </mat-paginator>
-
     </div>
   </div>
 

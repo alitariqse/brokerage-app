@@ -63,8 +63,9 @@
           <mat-header-row *matHeaderRowDef="actualColumns"></mat-header-row>
           <mat-row *matRowDef="let row; columns: actualColumns"></mat-row>
         </mat-table>
-        <mat-paginator  [pageSize]="10" aria-label="Select page">
-        </mat-paginator>
+        <mat-paginator [length]="formattedData?.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+        aria-label="Select page">
+      </mat-paginator>
       </div>
     </div>
 

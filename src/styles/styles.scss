@@ -206,7 +206,11 @@ body {
 }
 
 .mat-mdc-paginator-page-size {
-  display: none !important;
+  color: var(--text-color);
+}
+
+mat-select, .mat-mdc-select-arrow {
+  color: var(--text-muted-color) !important;
 }
 
 
