@@ -14,52 +14,63 @@
         </li>
     </ul>
     <!-- Program Card -->
-    <div *ngFor="let program of allPrograms" class="program-card" [style.border-left]="'10px solid ' + getColor(program.Type)">
-        <div class="row align-items-center mb-2">
-            <!-- <div class="col-auto">
-                <div class="icon-circle bg-light rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <span class="text-primary">🚀</span>
-                </div>
-            </div> -->
-            <div class="col">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h5 class="mb-0">{{program?.name}}</h5>
-                        <small class="text-muted">#{{program?.id}}</small>
+    <ng-container *ngIf="!isLoading; else loadingTemplate">
+        <div *ngFor="let program of allPrograms" class="program-card"
+            [style.border-left]="'10px solid ' + getColor(program.Type)">
+            <div class="row align-items-center mb-2">
+                <!-- <div class="col-auto">
+                    <div class="icon-circle bg-light rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;">
+                        <span class="text-primary">🚀</span>
+                    </div>
+                </div> -->
+                <div class="col">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="mb-0">{{program?.name}}</h5>
+                            <small class="text-muted">#{{program?.id}}</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col card-content-row">
-                <div class="card-content-item">
-                    <small class="text-muted">Size</small>
-                    <p class="mb-0">{{program?.size}}</p>
+                <div class="col card-content-row">
+                    <div class="card-content-item">
+                        <small class="text-muted">Size</small>
+                        <p class="mb-0">{{program?.size}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col card-content-row">
+                <div class="col card-content-row">
 
-                <div class="card-content-item">
-                    <small class="text-muted">Balance</small>
-                    <p class="mb-0">{{program?.balance}}</p>
+                    <div class="card-content-item">
+                        <small class="text-muted">Balance</small>
+                        <p class="mb-0">{{program?.balance}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col card-content-row">
+                <div class="col card-content-row">
 
-                <div class="card-content-item">
-                    <small class="text-muted">Status</small>
-                    <div class="status-badge" [ngClass]="getStatusClass(program.status)">
-                        {{ program.status }}
-                      </div>                </div>
-            </div>
-            <div class="col card-content-row">
-                <div class="card-content-item">
-                    <small class="text-muted">Expiration date</small>
-                    <p class="mb-0">{{program?.expirationDate}}</p>
+                    <div class="card-content-item">
+                        <small class="text-muted">Status</small>
+                        <div class="status-badge" [ngClass]="getStatusClass(program.status)">
+                            {{ program.status }}
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <button class="dashboard-btn" type="button" routerLink="/dashboard/{{program?.id}}">Dashboard</button>
+                <div class="col card-content-row">
+                    <div class="card-content-item">
+                        <small class="text-muted">Expiration date</small>
+                        <p class="mb-0">{{program?.expirationDate}}</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <button class="dashboard-btn" type="button"
+                        routerLink="/dashboard/{{program?.id}}">Dashboard</button>
 
+                </div>
             </div>
         </div>
-    </div>
+    </ng-container>
+
+    <ng-template #loadingTemplate>
+        <div class="card mt-2 p-4 border-0">
+            <app-loading [qty]="3"></app-loading>
+        </div>
+    </ng-template>

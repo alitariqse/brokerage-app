@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--loading-color);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.square {
+  width: 50%;
+  height: 15rem;
+  border-radius: 2rem;
+  background: var(--loading-color);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Info Section Skeleton */
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title,
+.subtitle,
+.price,
+.change {
+  background: var(--loading-color);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.title {
+  height: 16px;
+}
+
+.subtitle {
+  height: 12px;
+}

@@ -5,7 +5,7 @@
         <img src="assets/{{commonService?.isDarkMode ? 'dark' : 'light'}}/closed-trade.png" alt="icon" class="me-2">
         <h5 class="card-title fs-18 mt-2">Closed Trades</h5>
       </div>
-      <mat-table [dataSource]="dataSource" class="mat-table scroll-bar-table custom-border">
+      <mat-table *ngIf="!isLoading; else loadingTemplate" [dataSource]="dataSource" class="mat-table scroll-bar-table custom-border">
         <ng-container matColumnDef="Account_ID">
           <mat-header-cell class="mat-header-font fw-bold fs-14 min-width-custom" *matHeaderCellDef>
             ID
@@ -102,9 +102,15 @@
         <mat-header-row *matHeaderRowDef="actualColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: actualColumns"></mat-row>
       </mat-table>
-      <mat-paginator [length]="formattedData?.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+      <mat-paginator *ngIf="!isLoading" [length]="formattedData?.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
         aria-label="Select page">
       </mat-paginator>
+
+      <ng-template #loadingTemplate>
+        <div class="mt-2 p-4">
+          <app-loading [qty]="3"></app-loading>
+        </div>
+      </ng-template>
     </div>
   </div>
 

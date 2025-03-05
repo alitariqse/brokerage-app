@@ -1,0 +1,32 @@
+<div [ngClass]="{ 'widgets-card p-3': isWidgetCard, 'flex-fill': isTile}"
+    *ngFor="let _ of getArrayFromQty();let last = last">
+    <div [ngClass]="isTile ? 'flex-column algin-items-start': 'flex-row align-items-center'" class="d-flex gap-3"
+        *ngIf="!textOnly && showMainWidget">
+        <div class="img"></div>
+        <div class="info flex-fill d-flex flex-column gap-2">
+            <div class="title w-75"></div>
+            <div class="subtitle w-50"></div>
+            <div class="subtitle w-25"></div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center gap-2 h-100" *ngIf="textOnly == true">
+        <div class="d-flex align-items-center row w-100 h-100 justify-content-center">
+            <div class="col-6 d-flex flex-column gap-2">
+                <div class="title w-100"></div>
+                <div class="subtitle w-75"></div>
+                <div class="subtitle w-50"></div>
+            </div>
+            <div class="col-6">
+                <div class="square w-100"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-2 h-100" *ngIf="squareOnly == true">
+        <div class="d-flex align-items-center row w-100 h-100 justify-content-center">
+            <div class="col-12">
+                <div class="square w-100"></div>
+            </div>
+        </div>
+    </div>
+</div>

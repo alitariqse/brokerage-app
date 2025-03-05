@@ -11,6 +11,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { AccountOverviewComponent } from './account-overview/account-overview.component';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     MatTableModule,
     DashboardRoutingModule,
     MatSliderModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    SharedModule
   ],
   exports: [
     OpenTradesComponent,

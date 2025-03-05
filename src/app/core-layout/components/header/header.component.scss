@@ -1,6 +1,14 @@
 .header {
     background: var(--layout-bg-color);
-    min-height: 3.5rem !important;
+    height: 3.5rem !important /* Adjust height as per your design */
+
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto !important;
+    }
+
 }
 
 .checkbox {

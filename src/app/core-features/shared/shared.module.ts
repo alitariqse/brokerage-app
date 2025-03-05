@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
   declarations: [
-    ComingSoonComponent
+    ComingSoonComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    ComingSoonComponent
+    ComingSoonComponent,
+    LoadingComponent
   ]
 })
 export class SharedModule { }

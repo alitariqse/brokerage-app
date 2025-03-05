@@ -13,6 +13,7 @@ export class OpenTradesComponent implements OnInit {
   formattedData: any = [];
   pageSize = 10;
   pageSizeOptions = [10, 20, 50, 100];
+  isLoading: boolean = true
   constructor(private commonService: CommonService) { }
 
   dataSource = new MatTableDataSource<any>()
@@ -36,10 +37,13 @@ export class OpenTradesComponent implements OnInit {
         this.formattedData = data
         this.dataSource.data = this.formattedData; // Assign data instead of creating a new instance
         this.dataSource.paginator = this.paginator; // Reassign paginator after data update
+        setTimeout(() => {
+          this.isLoading = false
+        }, 500);
       },
 
       error: (data) => {
-
+        this.isLoading = false
       }
     })
   }

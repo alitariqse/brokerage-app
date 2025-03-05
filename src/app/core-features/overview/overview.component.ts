@@ -8,6 +8,7 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class OverviewComponent implements OnInit {
   allPrograms: any[] = [];
+  isLoading: boolean = true;
 
   constructor(private commonService: CommonService) {
 
@@ -59,9 +60,13 @@ export class OverviewComponent implements OnInit {
         if (data?.programs?.length) {
           this.allPrograms = data.programs
         }
+        setTimeout(() => {
+          this.isLoading = false
+        }, 500);
       },
-      error: (data) => {
 
+      error: (data) => {
+        this.isLoading = false
       }
     })
   }
